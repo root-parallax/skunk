@@ -47,7 +47,7 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,8 +58,10 @@ body {
 }
 
 .player-0-panel,
-.player-1-panel {
-    width: 50%;
+.player-1-panel,
+.player-2-panel,
+.player-3-panel {
+    width: 25%;
     float: left;
     height: 600px;
     padding: 100px;
@@ -76,6 +78,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 100;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -98,15 +101,14 @@ body {
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
-    right: 10px;
+    
     
 }
 
 .player-current-box {
     background-color: #EB4D4D;
     color: #fff;
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     padding: 12px;
     text-align: center;
@@ -115,7 +117,7 @@ body {
 .player-current-label {
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 10px;
     color: #222;
 }
 
