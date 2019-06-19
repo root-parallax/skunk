@@ -10,15 +10,24 @@ GAME RULES:
 */
 
 var scores, roundScore, activePlayer, gamePlaying;
-
+var count = 0;
 init();
 var currentplayer = 0;
+
 
 document.getElementById("hehe").addEventListener('click',() => init());
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if(gamePlaying) {
         // 1. Random number
+        if(count==0||count==1){
+            if(count==0)
+            document.getElementById('dice-1').style.visibility = "visible";
+            if(count==1)
+            document.getElementById('dice-2').style.visibility = "visible";
+            count++;
+        }
+       
         var dice = Math.floor(Math.random() * 6) + 1;
 
         // 2. Display the result
@@ -100,6 +109,7 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
+    count = 0;
     
     //document.querySelector('.dice').style.display = 'none';
 
@@ -124,8 +134,8 @@ function init() {
     document.querySelector('.player-2-panel').classList.remove('active');
     document.querySelector('.player-3-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
-    document.getElementById('dice-1').src ="dice-5.png";
-    document.getElementById('dice-2').src = "dice-5.png";
+    document.getElementById('dice-1').style.visibility = "hidden";
+    document.getElementById('dice-2').style.visibility = "hidden";
 }
 
 //document.querySelector('#current-' + activePlayer).textContent = dice;
